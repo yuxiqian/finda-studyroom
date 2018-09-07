@@ -25,7 +25,7 @@
 ### Python
 - lxml
 
-## ~~Swift（还没开始挖这个坑）
-- ~~Kanna
-- ~~Alamofire
-- ~~...
+## ~~Swift（还没开始挖这个坑）~~
+- ~~Kanna~~
+- ~~Alamofire~~
+- ~~...~~
