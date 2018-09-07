@@ -3,6 +3,13 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+## macOS cache files
+*.DS_Store
+.AppleDouble
+.LSOverride
+
+cache
+
 # C extensions
 *.so
 
