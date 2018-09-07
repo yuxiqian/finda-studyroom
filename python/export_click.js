@@ -23,6 +23,10 @@ window.open(document.getElementById('ReportViewerControl')
 // encodeURIComponent encode 的就是 formatDropDown.value, 即
 // "XML"、"CSV"、"TIFF"、"MHTML" 和 "EXCEL"。
 
+// 跳转到的页面：
+
+// http://electsysq.sjtu.edu.cn/ReportServer/Reserved.ReportViewerWebControl.axd?ExecutionID=2ibmxcr501ukz5zds2ky1v55&ControlID=a45be4edf6064ca6ae8056a78811be9a&Culture=2052&UICulture=4&ReportStack=1&OpType=Export&FileName=LessonArrangeForOthers&ContentDisposition=OnlyHtmlInline&Format=XML
+
 formatDropDown.selectedIndex = 0;
 document.getElementById('ReportViewerControl_ctl01_ctl05_ctl01')
     .Controller.SetViewerLinkActive(

@@ -5,9 +5,11 @@ from lxml import etree
 
 queryUrl = 'http://electsysq.sjtu.edu.cn/ReportServer/Pages/ReportViewer.aspx?%2fExamArrange%2fLessonArrangeForOthers&rs:Command=Render'
 exportUrl = 'http://electsysq.sjtu.edu.cn/ReportServer/Reserved.ReportViewerWebControl.axd?ExecutionID=2ibmxcr501ukz5zds2ky1v55&ControlID=a45be4edf6064ca6ae8056a78811be9a&Culture=2052&UICulture=4&ReportStack=1&OpType=Export&FileName=LessonArrangeForOthers&ContentDisposition=OnlyHtmlInline&Format='
-currentPath = os.path.dirname(os.path.abspath(__file__))
 
 format = ["XML", "CSV", "TIFF", "MHTML", "EXCEL"]
+buildings = ["闵行上院", '闵行中院', '闵行下院', "闵行东上院", '闵行东中院', '闵行东下院']
+
+currentPath = os.path.dirname(os.path.abspath(__file__))
 cachePath = os.path.join(currentPath, "cache")
 
 session = requests.session()
