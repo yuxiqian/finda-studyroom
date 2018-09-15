@@ -35,7 +35,10 @@
     字符串。教务处官方对于此门课程的称呼。包含全角括号的附加说明。
 
 ### teacher, 教师
-    字符串数组。授课教师的名字。可能不止一位。
+    字符串。授课教师的名字。
+    
+### teacher_title, 教师职称
+    字符串。授课教师的职称。
 
 ### year, 起始学年
     整数。官方给出的表示格式为 201x-201(x+1) 学年。简单起见，以秋季学期开始的年份作为起始学年。
@@ -49,8 +52,7 @@
 ### student_number, 学生人数
     整数。代表已经选择此门课的人数。
 
-### max_capacity, 最大人数
-    整数。代表此门课的最大学生容量。
+
 
 
 给出 JSON 文件样例：
@@ -59,29 +61,27 @@
 	"data": [
 		{
 			"identifier": "002-(2018-2019-1)NA327(教学班)",
-			"arrangement": {
-				"start_week": 1,
-				"end_week": 17,
-				"odd_week": [{
-					"week_day": 2,
-					"start_from": 9,
-					"end_at": 10,
-					"classroom": "上院418",
-				}],
-				"even_week": [{
-					"week_day": 2,
-					"start_from": 9,
-					"end_at": 10,
-					"classroom": "上院418",
-				}],
-				"name": "英美名诗赏析",
-				"teacher": ["何艳"],
-				"year": 2010,
-				"term": 2,
-				"credit": 2.0,
-				"student_number": 37,
-				"max_capacity": 35,
-			}
+            "start_week": 1,
+            "end_week": 17,
+            "odd_week": [{
+                "week_day": 2,
+                "start_from": 9,
+                "end_at": 10,
+                "classroom": "上院418",
+            }],
+            "even_week": [{
+                "week_day": 2,
+                "start_from": 9,
+                "end_at": 10,
+                "classroom": "上院418",
+            }],
+            "name": "英美名诗赏析",
+            "teacher": "何艳",
+            "teacher_title": "大学讲师"
+            "year": 2010,
+            "term": 2,
+            "credit": 2.0,
+            "student_number": 37,
 		}
 	]
 }

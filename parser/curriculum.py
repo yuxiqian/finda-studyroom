@@ -13,12 +13,6 @@ class Arrangement:
     week_day = 0
     # 星期数。约定使用 1 ～ 7 分别代表周一到周日。
 
-    start_week = 0
-    # 起始周数
-
-    end_week = 0
-    # 终止周数
-
     start_lesson = 0
     # 开始节数
 
@@ -74,14 +68,20 @@ class Curriculum:
     credit_score = 0.0
     # 学分
 
+    start_week = 0
+    # 起始周数
+
+    end_week = 0
+    # 终止周数
+
     def generate_arrangement(self, raw_arrangement):
         # 生成行课安排 (通过未经处理的字符串)
         arrange_box = raw_arrangement.split('\n')
         # print(arrange_box)
 
         week_info = [x for x in re.split("行课安排为第|-|周,其中:", arrange_box[0]) if x]
-        start_week = int(week_info[0])
-        end_week = int(week_info[1])
+        self.start_week = int(week_info[0])
+        self.end_week = int(week_info[1])
         # 搞出来起始周……
 
         is_odd_but_not_even = True
@@ -103,8 +103,7 @@ class Curriculum:
                     arr = deepcopy(Arrangement())
                     day_info = [x for x in re.split("星期|第|节--第|节", line) if x]
                     # print(day_info)
-                    arr.start_week = start_week
-                    arr.end_week = end_week
+
                     arr.week_day = han_to_int(day_info[0])
                     arr.start_lesson = int(day_info[1])
                     arr.end_lesson = int(day_info[2])
@@ -125,8 +124,6 @@ class Curriculum:
                     day_info = [x for x in re.split("星期|第|节--第|节", line) if x]
                     # print(day_info)
 
-                    arr.start_week = start_week
-                    arr.end_week = end_week
                     arr.week_day = han_to_int(day_info[0])
                     arr.start_lesson = int(day_info[1])
                     arr.end_lesson = int(day_info[2])
