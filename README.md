@@ -19,13 +19,3 @@
 #### 东上院 / East Upper Hall
 #### 东中院 / East Middle Hall
 #### 东下院 / Ease Lower Hall
-
-## 使用的第三方库
-
-### Python
-- lxml
-
-## ~~Swift（还没开始挖这个坑）~~
-- ~~Kanna~~
-- ~~Alamofire~~
-- ~~...~~
