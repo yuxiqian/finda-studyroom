@@ -1,4 +1,4 @@
-# finda-studyroom-in-sjtu
+# finda-studyroom
 
 ## 能做什么？
 
