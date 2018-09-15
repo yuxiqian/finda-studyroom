@@ -1,6 +1,11 @@
+# request.py
+#
+# written by yuxq long time ago. all rights reserved.
+
 import os
 import requests
 import urllib
+from lxml import etree
 
 queryUrl = 'http://electsysq.sjtu.edu.cn/ReportServer/Pages/ReportViewer.aspx?%2fExamArrange%2fLessonArrangeForOthers&rs:Command=Render'
 exportUrl = 'http://electsysq.sjtu.edu.cn/ReportServer/Reserved.ReportViewerWebControl.axd?ExecutionID=2ibmxcr501ukz5zds2ky1v55&ControlID=a45be4edf6064ca6ae8056a78811be9a&Culture=2052&UICulture=4&ReportStack=1&OpType=Export&FileName=LessonArrangeForOthers&ContentDisposition=OnlyHtmlInline&Format='
