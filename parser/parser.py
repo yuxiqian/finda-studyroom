@@ -43,6 +43,8 @@ with open(csv_path, "r", encoding = "utf-8") as raw_file:
                 cur.learn_hour = int(line[5])
                 cur.credit_score = float(line[6])
                 cur.notes = line[8]
+                cur.term = term
+                cur.school_year = start_year
                 cur.target_grade = int(line[9])
                 cur.school_year = int(line[10][:4])
                 cur.judge_term(int(line[11]))
@@ -73,6 +75,14 @@ data_summer = {'data': []}
 for i in course_list:
     part = {}
     part['identifier'] = i.identifier
+    part['holder_school'] = i.holder_school
+    part['name'] = i.title_name
+    part['year'] = i.school_year
+    part['term'] = i.term
+    part['target_grade'] = i.target_grade
+    part['teacher'] = i.teacher_name
+    part['teacher_title'] = i.teacher_title
+    part['credit'] = i.credit_score
     part['start_week'] = i.start_week
     part['end_week'] = i.end_week
     part['odd_week'] = []
@@ -91,13 +101,8 @@ for i in course_list:
             'end_at': comp.end_lesson,
             'classroom': comp.classroom
         })
-    part['name'] = i.title_name
-    part['teacher'] = i.teacher_name
-    part['teacher_title'] = i.teacher_title
     part['student_number'] = i.student_number
-    part['year'] = i.school_year
-    part['credit'] = i.credit_score
-    part['term'] = i.term
+
     if i.term == 3:
         data_summer['data'].append(part)
     else:
