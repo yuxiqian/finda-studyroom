@@ -79,7 +79,7 @@ class Curriculum:
         arrange_box = raw_arrangement.split('\n')
         # print(arrange_box)
 
-        week_info = [x for x in re.split("行课安排为第|-|周,其中:", arrange_box[0]) if x]
+        week_info = [x for x in re.split("行课安排为第|-|周---第|周,其中:", arrange_box[0]) if x]
         self.start_week = int(week_info[0])
         self.end_week = int(week_info[1])
         # 搞出来起始周……
