@@ -11,11 +11,12 @@ from utils import *
 from curriculum import *
 
 start_year = int(input("Input the year when the term started >>> "))
-term = int(input("Input the term code (1 = autumn or 2 = spring) >>> "))
+term = int(input("Input the term code (1 = autumn or 2 = spring + summer) >>> "))
 
 current_path = os.path.dirname(os.path.abspath(__file__))
 csv_path = os.path.abspath(os.path.join(current_path, "../csv_data/%d_%d_%d.csv" % (start_year, start_year + 1, term)))
 json_path = os.path.abspath(os.path.join(current_path, "../json_output/%d_%d_%d.json" % (start_year, start_year + 1, term)))
+summer_json_path = os.path.abspath(os.path.join(current_path, "../json_output/%d_%d_3.json" % (start_year, start_year + 1)))
 # print(current_path)
 # print(csv_path)
 # input()
@@ -68,6 +69,7 @@ with open(csv_path, "r", encoding = "utf-8") as raw_file:
 raw_file.close()
 
 data = {'data': []}
+data_summer = {'data': []}
 for i in course_list:
     part = {}
     part['identifier'] = i.identifier
@@ -95,9 +97,18 @@ for i in course_list:
     part['student_number'] = i.student_number
     part['year'] = i.school_year
     part['credit'] = i.credit_score
-    data['data'].append(part)
+    part['term'] = i.term
+    if i.term == 3:
+        data_summer['data'].append(part)
+    else:
+        data['data'].append(part)
 
 
 with open(json_path, 'w', encoding = 'utf-8') as json_file:
     json.dump(data, json_file, ensure_ascii = False)
 json_file.close()
+
+if len(data_summer['data']) != 0:
+    with open(summer_json_path, 'w', encoding = 'utf-8') as json_file:
+        json.dump(data_summer, json_file, ensure_ascii = False)
+    json_file.close()
