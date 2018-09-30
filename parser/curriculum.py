@@ -166,9 +166,10 @@ class Curriculum:
 
     def judge_term(self, term):
         self.term = term
-        if "夏季" in self.notes and "学期" in self.notes:
+        if self.start_week > 17 and self.start_week < 22:
+            #        if "夏季" in self.notes and "学期" in self.notes:
             self.term = 3
-        # 教务处暑期小学期是在备注里标明的……绝了
+            #       # 教务处暑期小学期是在备注里标明的……绝了
 
     def print_me(self):
         print(self.title_name)
