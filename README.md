@@ -17,9 +17,12 @@
 ## 支持的教学楼
 
 ### 上海交通大学闵行校区
-#### 上院 / Upper Hall
-#### 中院 / Middle Hall
-#### 下院 / Lower Hall
-#### 东上院 / East Upper Hall
-#### 东中院 / East Middle Hall
-#### 东下院 / Ease Lower Hall
+#### 上院
+#### 中院
+#### 下院
+#### 东上院
+#### 东中院
+#### 东下院
+
+### 上海交通大学徐汇校区
+#### 教学一楼
