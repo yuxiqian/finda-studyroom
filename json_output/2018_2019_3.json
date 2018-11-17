@@ -1,1 +1,34 @@
-{"data": [{"identifier": "001-(2018-2019-1)AM357(教学班)", "holder_school": "安泰经济与管理学院", "name": "军事理论与军训", "year": 2018, "term": 3, "target_grade": 2014, "teacher": "闫成", "teacher_title": "讲师(高校)", "credit": 6.0, "start_week": 19, "end_week": 22, "odd_week": [{"week_day": 1, "start_from": 5, "end_at": 6, "classroom": "不安排教室"}], "even_week": [{"week_day": 1, "start_from": 5, "end_at": 6, "classroom": "不安排教室"}], "student_number": 2}]}
+{
+    "data": [
+        {
+            "identifier": "001-(2018-2019-1)AM357(教学班)",
+            "holder_school": "安泰经济与管理学院",
+            "name": "军事理论与军训",
+            "year": 2018,
+            "term": 3,
+            "target_grade": 2014,
+            "teacher": "闫成",
+            "teacher_title": "讲师(高校)",
+            "credit": 6.0,
+            "start_week": 19,
+            "end_week": 22,
+            "odd_week": [
+                {
+                    "week_day": 1,
+                    "start_from": 5,
+                    "end_at": 6,
+                    "classroom": "不安排教室"
+                }
+            ],
+            "even_week": [
+                {
+                    "week_day": 1,
+                    "start_from": 5,
+                    "end_at": 6,
+                    "classroom": "不安排教室"
+                }
+            ],
+            "student_number": 2
+        }
+    ]
+}

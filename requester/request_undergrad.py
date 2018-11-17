@@ -21,7 +21,7 @@ session = requests.session()
 headers = {
     'Connection': 'keep-alive',
     'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36'
-    }
+}
 
 session.headers.update(headers)
 
@@ -33,7 +33,8 @@ fresh_html = etree.HTML(fresh_page)
 # query 页面里面藏有三个隐藏字段，Post 的时候要一并发过去。
 
 view_state = fresh_html.xpath('//*[@id="__VIEWSTATE"]/@value')
-view_state_generator = fresh_html.xpath('//*[@id="__VIEWSTATEGENERATOR"]/@value')
+view_state_generator = fresh_html.xpath(
+    '//*[@id="__VIEWSTATEGENERATOR"]/@value')
 event_validation = fresh_html.xpath('//*[@id="__EVENTVALIDATION"]/@value')
 
 postParams = {}
@@ -43,16 +44,16 @@ postParams['__VIEWSTATEGENERATOR'] = view_state_generator
 postParams['__EVENTTARGET'] = ''
 postParams['__EVENTARGUMENT'] = ''
 postParams['__EVENTVALIDATION'] = event_validation
-postParams['ReportViewerControl$ctl00$ctl03$ddValue']: 3
+postParams['ReportViewerControl$ctl00$ctl03$ddValue']: '3'
 # 这个参数代表了学年。目前 1 代表 2018 - 2019 学年。
 
-postParams['ReportViewerControl$ctl00$ctl05$ddValue']: 2
+postParams['ReportViewerControl$ctl00$ctl05$ddValue']: '2'
 # 这个参数代表学期。一样，3 代表暑期小学期查出来是空的。
 
-postParams['ReportViewerControl$ctl00$ctl07$ddValue']: 1
+postParams['ReportViewerControl$ctl00$ctl07$ddValue']: '1'
 postParams['ReportViewerControl$ctl00$ctl09$txtValue']: ''
 postParams['ReportViewerControl$ctl00$ctl11$txtValue']: ''
-postParams['ReportViewerControl$ctl00$ctl13$ddValue']: 1
+postParams['ReportViewerControl$ctl00$ctl13$ddValue']: '1'
 postParams['ReportViewerControl$ctl00$ctl15$txtValue']: ''
 postParams['ReportViewerControl$ctl00$ctl17$txtValue']: ''
 postParams['ReportViewerControl$ctl00$ctl19$txtValue']: '闵行上院'
@@ -60,14 +61,14 @@ postParams['ReportViewerControl$ctl00$ctl00']: '查看报表'
 postParams['ReportViewerControl$ctl01$ctl05$ctl00']: '选择格式'
 postParams['ReportViewerControl$ctl04']: ''
 postParams['ReportViewerControl$ctl05']: ''
-postParams['ReportViewerControl$ctl06']: 1
+postParams['ReportViewerControl$ctl06']: '1'
 postParams['ReportViewerControl$ctl07']: 'false'
 postParams['ReportViewerControl$ctl08']: 'false'
 
 print("Params: ")
 print(postParams)
 
-session.post(queryUrl, data = postParams)
+session.post(queryUrl, data=postParams)
 
 requestUrl = session.get(exportUrl + format[1])
 print("writing csv to file...")
