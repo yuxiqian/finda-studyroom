@@ -5,24 +5,32 @@
 
 import os
 import csv
+import sys
 import json
+import datetime
 
+from requester.request_postgrad import *
 from utils import *
 from curriculum import *
+
+sys.path.append('../requester')
 
 start_year = int(input("Input the year when the term started >>> "))
 term = int(input("Input the term code (1 = autumn or 2 = spring + summer) >>> "))
 
 current_path = os.path.dirname(os.path.abspath(__file__))
-csv_path = os.path.abspath(os.path.join(current_path, "../csv_data/%d_%d_%d.csv" % (start_year, start_year + 1, term)))
-json_path = os.path.abspath(os.path.join(current_path, "../json_output/%d_%d_%d.json" % (start_year, start_year + 1, term)))
-summer_json_path = os.path.abspath(os.path.join(current_path, "../json_output/%d_%d_3.json" % (start_year, start_year + 1)))
+csv_path = os.path.abspath(os.path.join(
+    current_path, "../csv_data/%d_%d_%d.csv" % (start_year, start_year + 1, term)))
+json_path = os.path.abspath(os.path.join(
+    current_path, "../json_output/%d_%d_%d.json" % (start_year, start_year + 1, term)))
+summer_json_path = os.path.abspath(os.path.join(
+    current_path, "../json_output/%d_%d_3.json" % (start_year, start_year + 1)))
 # print(current_path)
 # print(csv_path)
 # input()
 
 course_list = []
-with open(csv_path, "r", encoding = "utf-8") as raw_file:
+with open(csv_path, "r", encoding="utf-8") as raw_file:
     lines = csv.reader(raw_file)
 
     for line in lines:
@@ -57,7 +65,7 @@ with open(csv_path, "r", encoding = "utf-8") as raw_file:
                 pass
         course_list.append(cur)
         # cur.print_me()
-        print('.', end = '')
+        print('.', end='')
     print("完成，一共解析了 %d 枚课程数据。" % (len(course_list)))
     # while True:
     #     x = int(input("Pick one to see >>> "))
@@ -65,12 +73,14 @@ with open(csv_path, "r", encoding = "utf-8") as raw_file:
     #         course_list[x].print_me()
     #     else:
     #         break
-        # print(line)
+    # print(line)
     # for cur in course_list:
     #     cur.print_me()
 raw_file.close()
 
-data = {'data': []}
+data = {'generate_time': datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+        'data': []
+        }
 data_summer = {'data': []}
 for i in course_list:
     part = {}
@@ -108,12 +118,14 @@ for i in course_list:
     else:
         data['data'].append(part)
 
+    data['data'].append(query_postgrad_data(start_year, term))
 
-with open(json_path, 'w', encoding = 'utf-8') as json_file:
-    json.dump(data, json_file, ensure_ascii = False)
+
+with open(json_path, 'w', encoding='utf-8') as json_file:
+    json.dump(data, json_file, ensure_ascii=False)
 json_file.close()
 
 if len(data_summer['data']) != 0:
-    with open(summer_json_path, 'w', encoding = 'utf-8') as json_file:
-        json.dump(data_summer, json_file, ensure_ascii = False)
+    with open(summer_json_path, 'w', encoding='utf-8') as json_file:
+        json.dump(data_summer, json_file, ensure_ascii=False)
     json_file.close()
