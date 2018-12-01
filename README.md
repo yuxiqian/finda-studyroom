@@ -8,9 +8,15 @@
 - [x] 解析 CSV 格式文件，转码输出为可读的 JSON 格式
 
 - [x] 将得到的数据可视化
-  > [electsys-utility](https://github.com/yuxiqian/electsys-utility) macOS 版本
+
+  macOS 版
+  > [electsys-utility](https://github.com/yuxiqian/electsys-utility)
   
-  > [electsys-utility-cli](https://github.com/yuxiqian/electsys-utility-cli) Python 命令行版本
+  Web 版
+  > [finda-studyroom](https://yuxiqian.github.io/index.html)
+  
+  Python 命令行版
+  > [electsys-utility-cli](https://github.com/yuxiqian/electsys-utility-cli)
 
 - [ ] 智能提供自习教室选择推荐
 
