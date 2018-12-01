@@ -9,7 +9,7 @@ import sys
 import json
 import datetime
 
-from requester.request_postgrad import *
+from requester.request_postgrad import query_postgrad_data
 from utils import *
 from curriculum import *
 
@@ -81,7 +81,11 @@ raw_file.close()
 data = {'generate_time': datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
         'data': []
         }
-data_summer = {'data': []}
+
+data_summer = {'generate_time': datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+               'data': []
+               }
+
 for i in course_list:
     part = {}
     part['identifier'] = i.identifier
@@ -118,7 +122,11 @@ for i in course_list:
     else:
         data['data'].append(part)
 
-    data['data'].append(query_postgrad_data(start_year, term))
+
+data['data'].append(query_postgrad_data(start_year, term))
+
+if term == 3:
+    data_summer['data'].append(query_postgrad_data(start_year, 3))
 
 
 with open(json_path, 'w', encoding='utf-8') as json_file:
