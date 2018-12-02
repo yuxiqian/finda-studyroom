@@ -126,7 +126,7 @@ for i in course_list:
 for curric in query_postgrad_data(start_year, term):
     data['data'].append(curric)
 
-if term == 3:
+if term == 2:
     for curric_summer in query_postgrad_data(start_year, 3):
         data['data'].append(curric_summer)
 
