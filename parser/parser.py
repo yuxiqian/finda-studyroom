@@ -123,10 +123,12 @@ for i in course_list:
         data['data'].append(part)
 
 
-data['data'].append(query_postgrad_data(start_year, term))
+for curric in query_postgrad_data(start_year, term):
+    data['data'].append(curric)
 
 if term == 3:
-    data_summer['data'].append(query_postgrad_data(start_year, 3))
+    for curric_summer in query_postgrad_data(start_year, 3):
+        data['data'].append(curric_summer)
 
 
 with open(json_path, 'w', encoding='utf-8') as json_file:
