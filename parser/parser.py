@@ -78,13 +78,13 @@ with open(csv_path, "r", encoding="utf-8") as raw_file:
     #     cur.print_me()
 raw_file.close()
 
-data = {'generate_time': datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
-        'data': []
-        }
+data = {
+    'data': []
+}
 
-data_summer = {'generate_time': datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
-               'data': []
-               }
+data_summer = {
+    'data': []
+}
 
 for i in course_list:
     part = {}
@@ -126,9 +126,13 @@ for i in course_list:
 for curric in query_postgrad_data(start_year, term):
     data['data'].append(curric)
 
+data['generate_time'] = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+
 if term == 2:
     for curric_summer in query_postgrad_data(start_year, 3):
-        data['data'].append(curric_summer)
+        data_summer['data'].append(curric_summer)
+    data_summer['generate_time'] = datetime.datetime.now().strftime(
+        '%Y-%m-%d %H:%M:%S')
 
 
 with open(json_path, 'w', encoding='utf-8') as json_file:
