@@ -134,11 +134,16 @@ def query_postgrad_data(start_year, term):
                         continue
                     part['start_week'] = int(arr_info[0])
                     part['end_week'] = int(arr_info[1])
+                    if len(arr_info) == 7:
+                        classroom = campus + arr_info[5] + '-' + arr_info[6]
+                    else:
+                        classroom = campus + arr_info[5]
+                    print("获得教室 " + classroom)
                     arr = {
                         'week_day': han_numbers.index(arr_info[2]),
                         'start_from': int(arr_info[3]),
                         'end_at': int(arr_info[4]),
-                        'classroom': campus + arr_info[5]
+                        'classroom': classroom
                     }
 
                     if odd_even_flag != 2:
