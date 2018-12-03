@@ -24,7 +24,7 @@ queryUrl = "http://www.yjs.sjtu.edu.cn:81/epstar/web/outer/KKBJ_CX/kkbj.jsp"
 
 campuses = ["闵行校区", "徐汇校区", "卢湾校区", "法华校区", "七宝校区", "外地", "上海市精神卫生中心", "临港校区"]
 
-campuses_id = ["噗噗噗", "闵行", "徐汇", "卢湾",
+campuses_id = ["哈！", "闵行", "徐汇", "卢湾",
                "法华", "七宝", "外地", "上海市精神卫生中心", "临港"]
 
 school_id = ['00000', '01000', '01900', '02000', '03000', '03100', '03200', '03300', '03400', '03500', '03600', '03700', '03900', '05000', '07100', '07200', '08000', '08200', '09000', '09600', '10000', '11000', '12000', '13000', '14000', '15000', '16000', '17000', '18000', '19000', '20000', '21000', '22000', '22100', '23000', '25100', '26000', '27000', '28000', '29000', '29100', '31000', '33000', '34000', '35000',
@@ -133,14 +133,17 @@ def query_postgrad_data(start_year, term):
                         # Skip this bad loop
                         continue
 
-                    if term != 3:
+                    if int(arr_info[0]) + int(arr_info[1]) < 10:
                         part['start_week'] = int(arr_info[0])
                         part['end_week'] = int(arr_info[1])
                     else:
                         part['start_week'] = int(arr_info[0]) + 19
                         part['end_week'] = int(arr_info[1]) + 19
+
                     if len(arr_info) >= 7:
-                        classroom = campus + arr_info[5] + '-' + arr_info[6]
+                        classroom = campus + \
+                            arr_info[5] + '-' + '-'.join(arr_info[6:])
+
                     else:
                         classroom = campus + arr_info[5]
                     print("获得教室 " + classroom)
