@@ -133,12 +133,18 @@ def query_postgrad_data(start_year, term):
                         # Skip this bad loop
                         continue
 
-                    if int(arr_info[0]) + int(arr_info[1]) < 10:
+                    if int(arr_info[0]) + int(arr_info[1]) > 10:
                         part['start_week'] = int(arr_info[0])
                         part['end_week'] = int(arr_info[1])
                     else:
-                        part['start_week'] = int(arr_info[0]) + 19
-                        part['end_week'] = int(arr_info[1]) + 19
+                        if term == 3:
+                            part['start_week'] = int(arr_info[0]) + 19
+                            part['end_week'] = int(arr_info[1]) + 19
+                            print("Relocate week to %d - %d" %
+                                  (int(arr_info[0]) + 19, int(arr_info[1]) + 19))
+                        else:
+                            part['start_week'] = int(arr_info[0])
+                            part['end_week'] = int(arr_info[1])
 
                     if len(arr_info) >= 7:
                         classroom = campus + \
