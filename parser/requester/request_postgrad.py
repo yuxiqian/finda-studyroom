@@ -132,9 +132,14 @@ def query_postgrad_data(start_year, term):
                         # print("Throw up " + arr)
                         # Skip this bad loop
                         continue
-                    part['start_week'] = int(arr_info[0])
-                    part['end_week'] = int(arr_info[1])
-                    if len(arr_info) == 7:
+
+                    if term != 3:
+                        part['start_week'] = int(arr_info[0])
+                        part['end_week'] = int(arr_info[1])
+                    else:
+                        part['start_week'] = int(arr_info[0]) + 19
+                        part['end_week'] = int(arr_info[1]) + 19
+                    if len(arr_info) >= 7:
                         classroom = campus + arr_info[5] + '-' + arr_info[6]
                     else:
                         classroom = campus + arr_info[5]
