@@ -3,15 +3,17 @@
 # written by yuxq in 2018/9/15. all rights reserved.
 
 
+from curriculum import *
+from utils import *
+from requester.request_postgrad import query_postgrad_data
 import os
 import csv
 import sys
 import json
 import datetime
 
-from requester.request_postgrad import query_postgrad_data
-from utils import *
-from curriculum import *
+UG_ONLY = False
+
 
 sys.path.append('../requester')
 
@@ -123,14 +125,16 @@ for i in course_list:
         data['data'].append(part)
 
 
-for curric in query_postgrad_data(start_year, term):
-    data['data'].append(curric)
+if not UG_ONLY:
+    for curric in query_postgrad_data(start_year, term):
+        data['data'].append(curric)
 
 data['generate_time'] = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
 if term == 2:
-    for curric_summer in query_postgrad_data(start_year, 3):
-        data_summer['data'].append(curric_summer)
+    if not UG_ONLY:
+        for curric_summer in query_postgrad_data(start_year, 3):
+            data_summer['data'].append(curric_summer)
     data_summer['generate_time'] = datetime.datetime.now().strftime(
         '%Y-%m-%d %H:%M:%S')
 
