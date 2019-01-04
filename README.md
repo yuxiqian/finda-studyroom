@@ -5,7 +5,7 @@
 - [x] 从 electsys.sjtu.edu.cn 抓取到指定学期 XML、CSV 或 HTML 等格式的上课教室数据
   > 抓取本科生数据功能坏了（小声）得手动存一下文件
 
-- [x] 解析 CSV 格式文件，转码输出为可读的 JSON 格式
+- [x] 解析 CSV 格式文件，转码输出为可读的 [JSON](https://github.com/yuxiqian/finda-studyroom/tree/master/json_output)
 
 - [x] 将得到的数据可视化
 
