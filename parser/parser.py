@@ -13,7 +13,7 @@ import json
 import datetime
 
 UG_ONLY = False
-NO_SUMMER = True
+# NO_SUMMER = True
 
 
 sys.path.append('../requester')
