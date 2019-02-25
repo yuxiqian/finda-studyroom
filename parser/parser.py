@@ -13,12 +13,14 @@ import json
 import datetime
 
 UG_ONLY = False
+NO_SUMMER = True
 
 
 sys.path.append('../requester')
 
 start_year = int(input("Input the year when the term started >>> "))
-term = int(input("Input the term code (1 = autumn or 2 = spring + summer) >>> "))
+term = int(input(
+    "Input the term code (1 = autumn or 2 = spring + summer) >>> "))
 
 current_path = os.path.dirname(os.path.abspath(__file__))
 csv_path = os.path.abspath(os.path.join(
@@ -131,12 +133,13 @@ if not UG_ONLY:
 
 data['generate_time'] = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
-if term == 2:
-    if not UG_ONLY:
-        for curric_summer in query_postgrad_data(start_year, 3):
-            data_summer['data'].append(curric_summer)
-    data_summer['generate_time'] = datetime.datetime.now().strftime(
-        '%Y-%m-%d %H:%M:%S')
+if not NO_SUMMER:
+    if term == 2:
+        if not UG_ONLY:
+            for curric_summer in query_postgrad_data(start_year, 3):
+                data_summer['data'].append(curric_summer)
+        data_summer['generate_time'] = datetime.datetime.now().strftime(
+            '%Y-%m-%d %H:%M:%S')
 
 
 with open(json_path, 'w', encoding='utf-8') as json_file:
