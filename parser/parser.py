@@ -13,7 +13,7 @@ import json
 import datetime
 
 UG_ONLY = False
-# NO_SUMMER = True
+NO_SUMMER = False
 
 
 sys.path.append('../requester')
@@ -68,6 +68,7 @@ with open(csv_path, "r", encoding="utf-8") as raw_file:
             else:
                 pass
         course_list.append(cur)
+        
         # cur.print_me()
         print('.', end='')
     print("完成，一共解析了 %d 枚课程数据。" % (len(course_list)))
@@ -90,6 +91,8 @@ data_summer = {
     'data': []
 }
 
+# build = set()
+
 for i in course_list:
     part = {}
     part['identifier'] = i.identifier
@@ -110,15 +113,17 @@ for i in course_list:
             'week_day': comp.week_day,
             'start_from': comp.start_lesson,
             'end_at': comp.end_lesson,
-            'classroom': comp.classroom
+            'classroom': gen_classroom(comp.classroom)
         })
+        # build.add(gen_classroom(comp.classroom))
     for comp in i.even_week:
         part['even_week'].append({
             'week_day': comp.week_day,
             'start_from': comp.start_lesson,
             'end_at': comp.end_lesson,
-            'classroom': comp.classroom
+            'classroom': gen_classroom(comp.classroom)
         })
+        # build.add(gen_classroom(comp.classroom))
     part['student_number'] = i.student_number
 
     if i.term == 3:
@@ -126,12 +131,20 @@ for i in course_list:
     else:
         data['data'].append(part)
 
+# for i in build:
+#     print(i)
+
+# UG_ONLY = True
 
 if not UG_ONLY:
     for curric in query_postgrad_data(start_year, term):
         data['data'].append(curric)
 
 data['generate_time'] = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+
+with open(json_path, 'w', encoding='utf-8') as json_file:
+    json.dump(data, json_file, ensure_ascii=False)
+json_file.close()
 
 if not NO_SUMMER:
     if term == 2:
@@ -141,10 +154,6 @@ if not NO_SUMMER:
         data_summer['generate_time'] = datetime.datetime.now().strftime(
             '%Y-%m-%d %H:%M:%S')
 
-
-with open(json_path, 'w', encoding='utf-8') as json_file:
-    json.dump(data, json_file, ensure_ascii=False)
-json_file.close()
 
 if len(data_summer['data']) != 0:
     with open(summer_json_path, 'w', encoding='utf-8') as json_file:
