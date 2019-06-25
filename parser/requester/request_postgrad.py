@@ -138,10 +138,10 @@ def query_postgrad_data(start_year, term):
                         part['end_week'] = int(arr_info[1])
                     else:
                         if term == 3:
-                            part['start_week'] = int(arr_info[0]) + 19
-                            part['end_week'] = int(arr_info[1]) + 19
+                            part['start_week'] = int(arr_info[0]) + 18
+                            part['end_week'] = int(arr_info[1]) + 18
                             print("Relocate week to %d - %d" %
-                                  (int(arr_info[0]) + 19, int(arr_info[1]) + 19))
+                                  (int(arr_info[0]) + 18, int(arr_info[1]) + 18))
                         else:
                             part['start_week'] = int(arr_info[0])
                             part['end_week'] = int(arr_info[1])
@@ -152,6 +152,7 @@ def query_postgrad_data(start_year, term):
 
                     else:
                         classroom = campus + arr_info[5]
+                    classroom = classroom.replace('教学一楼', '教一楼')
                     print("获得教室 " + classroom)
                     arr = {
                         'week_day': han_numbers.index(arr_info[2]),
