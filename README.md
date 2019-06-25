@@ -1,5 +1,14 @@
 # finda-studyroom
 
+![GitHub repo size](https://img.shields.io/github/repo-size/yuetsin/finda-studyroom.svg)
+
+## Data Source Status
+
+| Data Branch  | Status |
+| ------------- | ------------- |
+| Master (Default)  | [![Build Status](https://travis-ci.org/yuetsin/finda-studyroom.svg?branch=master)](https://travis-ci.org/yuetsin/finda-studyroom)  |
+| Beta  | [![Build Status](https://travis-ci.org/yuetsin/finda-studyroom.svg?branch=be-ta)](https://travis-ci.org/yuetsin/finda-studyroom)  |
+
 ## 能做什么？
 
 - [x] 从 electsys.sjtu.edu.cn 抓取到指定学期 XML、CSV 或 HTML 等格式的上课教室数据
