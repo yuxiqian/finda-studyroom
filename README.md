@@ -55,7 +55,9 @@
 
 ## 数据结构
 
-[查看数据存储结构](https://github.com/yuetsin/finda-studyroom/blob/master/struct/structure.jsonnet)
+[查看数据存储结构（JSON 样例）](https://github.com/yuetsin/finda-studyroom/blob/master/struct/structure.jsonnet)
+
+[查看数据存储结构（Markdown 文档）](https://github.com/yuetsin/finda-studyroom/blob/master/format/format.md)
 
 ## 数据来源
 
