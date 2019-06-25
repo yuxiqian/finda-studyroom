@@ -1,6 +1,6 @@
 # finda-studyroom
 
-![GitHub repo size](https://img.shields.io/github/repo-size/yuetsin/finda-studyroom.svg)
+![GitHub](https://img.shields.io/github/license/yuetsin/finda-studyroom.svg) ![GitHub repo size](https://img.shields.io/github/repo-size/yuetsin/finda-studyroom.svg)
 
 ## Data Source Status
 
