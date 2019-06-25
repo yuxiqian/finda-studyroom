@@ -32,6 +32,7 @@
 ### 更早的
 
 * [2017 年秋季门牌号重编前的数据](https://github.com/yuetsin/finda-studyroom/tree/master/json_output)
+
 ## 数据包括
 
 - [x] 课程名称、课号
@@ -51,6 +52,10 @@
 - [ ] 先修课程依赖
 
 - [ ] 课件及任何学习资料
+
+## 数据结构
+
+[查看数据存储结构](https://github.com/yuetsin/finda-studyroom/blob/master/struct/structure.jsonnet)
 
 ## 数据来源
 
