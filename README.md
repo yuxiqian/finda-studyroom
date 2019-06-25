@@ -21,13 +21,13 @@
 - [x] 将得到的数据可视化
 
   macOS 版
-  > [electsys-utility](https://github.com/yuxiqian/electsys-utility)
+  > [electsys-utility](https://github.com/yuetsin/electsys-utility)
   
   Web 版
-  > [finda-studyroom](https://yuxiqian.github.io/index.html)
+  > [finda-studyroom](https://yuetsin.github.io/index.html)
   
   Python 命令行版
-  > [electsys-utility-cli](https://github.com/yuxiqian/electsys-utility-cli)
+  > [electsys-utility-cli](https://github.com/yuetsin/electsys-utility-cli)
 
 - [ ] 智能提供自习教室选择推荐
 
