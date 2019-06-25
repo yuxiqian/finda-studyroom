@@ -15,6 +15,23 @@
 | Master (Default)  | [![Build Status](https://travis-ci.org/yuetsin/finda-studyroom.svg?branch=master)](https://travis-ci.org/yuetsin/finda-studyroom)  |
 | Beta  | [![Build Status](https://travis-ci.org/yuetsin/finda-studyroom.svg?branch=be-ta)](https://travis-ci.org/yuetsin/finda-studyroom)  |
 
+## JSON 地址
+
+### 2018 至 2019 学年
+* 秋季学期 · [`https://github.com/yuetsin/finda-studyroom/raw/master/json_output/2018_2019_1.json`](https://github.com/yuetsin/finda-studyroom/raw/master/json_output/2018_2019_1.json)
+
+* 春季学期 · [`https://github.com/yuetsin/finda-studyroom/raw/master/json_output/2018_2019_2.json`](https://github.com/yuetsin/finda-studyroom/raw/master/json_output/2018_2019_2.json)
+
+### 2017 至 2018 学年
+* 秋季学期 · [`https://github.com/yuetsin/finda-studyroom/raw/master/json_output/2017_2018_1.json`](https://github.com/yuetsin/finda-studyroom/raw/master/json_output/2017_2018_1.json)
+
+* 春季学期 · [`https://github.com/yuetsin/finda-studyroom/raw/master/json_output/2017_2018_2.json`](https://github.com/yuetsin/finda-studyroom/raw/master/json_output/2017_2018_2.json)
+
+* 夏季小学期 · [`https://github.com/yuetsin/finda-studyroom/raw/master/json_output/2017_2018_3.json`](https://github.com/yuetsin/finda-studyroom/raw/master/json_output/2017_2018_3.json)
+
+### 更早的
+
+* [2017 年秋季门牌号重编前的数据](https://github.com/yuetsin/finda-studyroom/tree/master/json_output)
 ## 数据包括
 
 - [x] 课程名称、课号
@@ -39,11 +56,11 @@
 
 * 本科课程来自 [`electsysq` 查询接口](http://electsysq.sjtu.edu.cn/ReportServer/Pages/ReportViewer.aspx?%2fExamArrange%2fLessonArrangeForOthers&rs:Command=Render)
 
-> 上海交通大学教务处 © 1999-2008 上海交通大学网络信息中心 沪交ICP备05005
+> 版权所有 © 1999 - 2019 上海交通大学网络信息中心 上海交通大学教务处 沪交ICP 备 05005
 
 * 研究生课程来自 [课表查询接口](http://www.yjs.sjtu.edu.cn:81/epstar/web/outer/KKBJ_CX/kkbj.jsp)
 
-> 版权所有 © 2018 上海交通大学研究生院 沪交ICP 备 50534
+> 版权所有 © 2019 上海交通大学研究生院 沪交ICP 备 50534
 
 ## 已知问题
 
