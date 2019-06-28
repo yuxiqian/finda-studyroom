@@ -10,11 +10,11 @@
 
 ## 状态
 
-| Data Branch  | Status |
-| ------------- | ------------- |
-| Master (Default)  | [![Build Status](https://travis-ci.org/yuetsin/finda-studyroom.svg?branch=master)](https://travis-ci.org/yuetsin/finda-studyroom)  |
-| Beta (Pre-Release)  | [![Build Status](https://travis-ci.org/yuetsin/finda-studyroom.svg?branch=be-ta)](https://travis-ci.org/yuetsin/finda-studyroom)  |
-| Develop | [![Build Status](https://travis-ci.org/yuetsin/finda-studyroom.svg?branch=dev)](https://travis-ci.org/yuetsin/finda-studyroom)  |
+| Data Branch | Last Commit | Status |
+| ------------- | ------------- | ------------- |
+| Master (Default) | ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/yuetsin/finda-studyroom/master.svg) | [![Build Status](https://travis-ci.org/yuetsin/finda-studyroom.svg?branch=master)](https://travis-ci.org/yuetsin/finda-studyroom)  |
+| Beta (Pre-Release) | ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/yuetsin/finda-studyroom/be-ta.svg) | [![Build Status](https://travis-ci.org/yuetsin/finda-studyroom.svg?branch=be-ta)](https://travis-ci.org/yuetsin/finda-studyroom)  |
+| Develop | ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/yuetsin/finda-studyroom/dev.svg) | [![Build Status](https://travis-ci.org/yuetsin/finda-studyroom.svg?branch=dev)](https://travis-ci.org/yuetsin/finda-studyroom)  |
 
 ## JSON 地址
 
