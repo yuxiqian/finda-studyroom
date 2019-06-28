@@ -13,7 +13,8 @@
 | Data Branch  | Status |
 | ------------- | ------------- |
 | Master (Default)  | [![Build Status](https://travis-ci.org/yuetsin/finda-studyroom.svg?branch=master)](https://travis-ci.org/yuetsin/finda-studyroom)  |
-| Beta  | [![Build Status](https://travis-ci.org/yuetsin/finda-studyroom.svg?branch=be-ta)](https://travis-ci.org/yuetsin/finda-studyroom)  |
+| Beta (Pre-Release)  | [![Build Status](https://travis-ci.org/yuetsin/finda-studyroom.svg?branch=be-ta)](https://travis-ci.org/yuetsin/finda-studyroom)  |
+| Develop | [![Build Status](https://travis-ci.org/yuetsin/finda-studyroom.svg?branch=dev)](https://travis-ci.org/yuetsin/finda-studyroom)  |
 
 ## JSON 地址
 
