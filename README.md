@@ -23,6 +23,8 @@
 
 * 春季学期 · [`https://github.com/yuetsin/finda-studyroom/raw/master/json_output/2018_2019_2.json`](https://github.com/yuetsin/finda-studyroom/raw/master/json_output/2018_2019_2.json)
 
+* 夏季小学期 · [`https://github.com/yuetsin/finda-studyroom/raw/master/json_output/2018_2019_3.json`](https://github.com/yuetsin/finda-studyroom/raw/master/json_output/2018_2019_3.json)
+
 ### 2017 至 2018 学年
 * 秋季学期 · [`https://github.com/yuetsin/finda-studyroom/raw/master/json_output/2017_2018_1.json`](https://github.com/yuetsin/finda-studyroom/raw/master/json_output/2017_2018_1.json)
 
