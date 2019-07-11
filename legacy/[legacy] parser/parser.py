@@ -23,13 +23,8 @@ term = int(input(
     "Input the term code (1 = autumn or 2 = spring + summer), 3 = summer only >>> "))
 
 current_path = os.path.dirname(os.path.abspath(__file__))
-
-if term != 3:
-    csv_path = os.path.abspath(os.path.join(
-        current_path, "../csv_data/%d_%d_%d.csv" % (start_year, start_year + 1, term)))
-else:
-    csv_path = os.path.abspath(os.path.join(
-        current_path, "../csv_data/%d_%d_%d.csv" % (start_year, start_year + 1, 2)))
+csv_path = os.path.abspath(os.path.join(
+    current_path, "../csv_data/%d_%d_%d.csv" % (start_year, start_year + 1, term)))
 json_path = os.path.abspath(os.path.join(
     current_path, "../json_output/%d_%d_%d.json" % (start_year, start_year + 1, term)))
 summer_json_path = os.path.abspath(os.path.join(
@@ -161,8 +156,6 @@ if not NO_SUMMER:
         data_summer['generate_time'] = datetime.datetime.now().strftime(
             '%Y-%m-%d %H:%M:%S')
     elif term == 3:
-        for curric_summer in query_postgrad_data(start_year, 3):
-                data_summer['data'].append(curric_summer)
         data_summer['generate_time'] = datetime.datetime.now().strftime(
             '%Y-%m-%d %H:%M:%S')
 
