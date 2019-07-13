@@ -2,9 +2,10 @@
 
 上海交通大学本科生 + 研究生历年课程基本数据集。
 
-![GitHub](https://img.shields.io/github/license/yuetsin/finda-studyroom.svg)
-![GitHub release](https://img.shields.io/github/release/yuetsin/finda-studyroom.svg)
-![GitHub repo size](https://img.shields.io/github/repo-size/yuetsin/finda-studyroom.svg)
+![GitHub](https://img.shields.io/github/license/yuetsin/finda-studyroom.svg?style=flat-square)
+![GitHub release](https://img.shields.io/github/release/yuetsin/finda-studyroom.svg?style=flat-square)
+![GitHub repo size](https://img.shields.io/github/repo-size/yuetsin/finda-studyroom.svg?style=flat-square)
+[![About Mine](https://img.shields.io/badge/see-mine-inactive.svg?style=flat-square)](https://github.com/yuetsin/curricula)
 
 ---
 
@@ -12,9 +13,9 @@
 
 | Data Branch | Last Commit | Status |
 | ------------- | ------------- | ------------- |
-| Master (Default) | ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/yuetsin/finda-studyroom/master.svg) | [![Build Status](https://travis-ci.org/yuetsin/finda-studyroom.svg?branch=master)](https://travis-ci.org/yuetsin/finda-studyroom)  |
-| Beta (Pre-Release) | ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/yuetsin/finda-studyroom/be-ta.svg) | [![Build Status](https://travis-ci.org/yuetsin/finda-studyroom.svg?branch=be-ta)](https://travis-ci.org/yuetsin/finda-studyroom)  |
-| Develop | ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/yuetsin/finda-studyroom/dev.svg) | [![Build Status](https://travis-ci.org/yuetsin/finda-studyroom.svg?branch=dev)](https://travis-ci.org/yuetsin/finda-studyroom)  |
+| Master (Default) | ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/yuetsin/finda-studyroom/master.svg?style=flat-square) | ![Travis (.org) branch](https://img.shields.io/travis/yuetsin/finda-studyroom/master.svg?logo=appveyor&style=flat-square)  |
+| Beta (Pre-Release) | ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/yuetsin/finda-studyroom/be-ta.svg?style=flat-square) | ![Travis (.org) branch](https://img.shields.io/travis/yuetsin/finda-studyroom/be-ta.svg?logo=appveyor&style=flat-square)  |
+| Develop | ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/yuetsin/finda-studyroom/dev.svg?style=flat-square) | ![Travis (.org) branch](https://img.shields.io/travis/yuetsin/finda-studyroom/dev.svg?logo=appveyor&style=flat-square)  |
 
 ## JSON 地址
 
