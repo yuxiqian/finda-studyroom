@@ -1,5 +1,11 @@
 # finda-studyroom
 
+> ⚠️ **由于本科教学信息服务网接口升级，此数据集已停止更新。**
+
+> **更新的数据集和 Dump 工具发布在** [这里 (`NG-Course`)](https://github.com/yuetsin/NG-Course)。
+
+---
+
 上海交通大学本科生 + 研究生历年课程基本数据集。
 
 ![GitHub](https://img.shields.io/github/license/yuetsin/finda-studyroom.svg?style=flat-square)
